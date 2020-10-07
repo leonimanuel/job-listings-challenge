@@ -26,6 +26,12 @@ class JobListing extends Component {
 						<div className="location">{job.location}</div>
 					</div>
 				</div>
+				<div className="tags-wrapper">
+						<div className="tag role">{job.role}</div>
+						<div className="tag level">{job.level}</div>
+						{job.languages.map(lang => <div className="tag language">{lang}</div>)}
+						{job.tools.map(tool => <div className="tag language">{tool}</div>)}
+				</div>
 				
 			</div>
 		)
