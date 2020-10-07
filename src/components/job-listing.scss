@@ -5,15 +5,24 @@
   margin: 10px auto;
   padding: 10px 0;
   border: 2px solid blue;
+  font-size: 15px;
+	font-family: 'Spartan', sans-serif;			
+
 
 	.details-wrapper {
 		display: flex;
 		flex-direction: column;
 		text-align: left;
 		border: 2px solid green;
+
+		.company {
+			color: hsl(180, 29%, 50%);
+			// font-weight: bold;
+		}
 	
 		.posting-details {
 			display: flex;
+			color: hsl(180, 8%, 52%);
 		}
 	}
 }
