@@ -4,5 +4,17 @@
   background-color: white;
   margin: 10px auto;
   padding: 10px 0;
-  
+  border: 2px solid blue;
+
+	.details-wrapper {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		border: 2px solid green;
+	
+		.posting-details {
+			display: flex;
+		}
+	}
 }
+
