@@ -11,9 +11,15 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
   background-color: white;
   margin: 10px auto;
   padding: 10px 0;
-  // border: 2px solid blue;
+  
+  border-radius: 3px;
+
   font-size: 15px;
 	font-family: 'Spartan', sans-serif;			
+
+	&.featured {
+		border-left: 4px solid $desaturated-dark-cyan;
+	}
 
 	.logo {
 		width: 50px;

@@ -17,7 +17,7 @@ class JobListing extends Component {
 		debugger
 		const { job } = this.props
 		return (
-			<div className="job-wrapper">
+			<div className={`job-wrapper ${job.featured ? "featured" : null}`}>
 				<img className="logo" src={require(`../project_files/images/${job.logo.split("/").pop()}`)} alt="company logo"/>
 				<div className="details-wrapper">
 					<div className="company-and-highlights-wrapper">
