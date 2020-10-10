@@ -4,21 +4,15 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 
 #jobs-container {
 	max-width: 90%;
-	border: 2px solid green;
 	margin: 0 auto;
 }
 
 .job-wrapper {
-  // font: 100% $font-stack;  
-
   display: flex;
   align-items: center;
-  // width: 800px;
   min-width: 600px;
-  // max-width: 1000px;
 
   margin: 10px auto;
-  border: 2px solid black;
 
   background-color: white;
   padding: 10px 20px;
@@ -29,8 +23,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 	font-family: 'Spartan', sans-serif;			
 
 	@media only screen and (max-device-width: 375px) {
-		// background-color: green;
-		// min-width: 0px;
 		min-width: 0;
 		max-width: 90%;
 		margin: 50px auto;
@@ -39,8 +31,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		flex-direction: column;
 		align-items: flex-start;
 		font-size: 0.9em;
-		// margin: auto;
-		// width: 90%;
 	}  
 
 	&.featured {
@@ -51,7 +41,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		margin-right: 20px;
 
 		@media only screen and (max-device-width: 375px) {
-			// background-color: green;
 			position: absolute;
 			top: -35px;
 			width: 60px;
@@ -62,35 +51,29 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		display: flex;
 		flex-direction: column;
 		text-align: left;
-		// border: 2px solid green;
-		// margin-left: 20px;
 		line-height: 2em;
 
 		.company-and-highlights-wrapper {
 			display: flex;
-			// height: 1em;
-			border: 2px solid orange;
 			align-items: center;
-			// height: 100%;
 
 			.company {
 				color: hsl(180, 29%, 50%);
 				font-weight: 700;
+				margin-right: 10px
 			}
 
 			.highlight {
+				display: flex;
+				align-items: center;
+
 				padding: 0 10px;
 				padding-top: 3px;
 				margin: 0 5px;
 				border-radius: 20px;
 				height: 1.5em;
-				// border: 2px solid purple;
 				font-weight: 700;
-				display: flex;
-				align-items: center;
-				// display: table-cell;
-				// vertical-align: middle;			
-
+				font-size: 0.9em;					
 
 				&.new {
 					color: white;
@@ -118,7 +101,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 	.tags-wrapper {
 		margin-left: auto;
 		display: flex;
-		// border: 2px solid grey;
 		flex-wrap: wrap;
 		align-items: center;
 		
@@ -132,7 +114,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 			background-color: $light-grayish-cyan-filters;
 			color: hsl(180, 29%, 50%); 
 			padding: 10px;
-			// height: 1.5em;
 			margin-right: 10px;
 			margin-top: 20px;
 		}
