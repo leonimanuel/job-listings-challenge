@@ -10,7 +10,7 @@ class FilterBar extends Component {
 			<div className={`filter-bar ${filters.length ? null : "hidden"}`}>
 				<div id="filter-bar-content">
 					<div id="filters-container">
-						{filters.map(filter => <Filter filter={filter} onClickRemove={() => this.props.onFilterRemove(filter)}/>)}			
+						{filters.map(filter => <Filter key={filter} filter={filter} onClickRemove={() => this.props.onFilterRemove(filter)}/>)}			
 					</div>	
 					
 					<div id="clear-filters-button" onClick={this.props.onClearFilters}>Clear</div>		

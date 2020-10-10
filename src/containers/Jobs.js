@@ -10,7 +10,7 @@ class Jobs extends Component {
 			const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
 
 			if (filters.length === 0 || filters.every(filter => jobTags.includes(filter))) {
-				return <JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
+				return <JobListing key={job.company} job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
 			}
 		})
 	}
