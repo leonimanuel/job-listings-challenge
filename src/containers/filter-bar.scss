@@ -1,6 +1,7 @@
 $desaturated-dark-cyan: hsl(180, 29%, 50%);
 $light-grayish-cyan-filters: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
 .filter-bar {
 	width: 100%;
@@ -50,6 +51,11 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					cursor: pointer;
+				}
+
+				.filter-remove:hover {
+					background-color: $very-dark-grayish-cyan;					
 				}
 			}
 		}
@@ -58,7 +64,13 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		#clear-filters-button {
 			color: $dark-grayish-cyan;
 			font-weight: 700;
+			cursor: pointer;
 		}	
+
+		#clear-filters-button:hover {
+			color: $desaturated-dark-cyan;
+			text-decoration: underline;
+		}
 	}
 }
 
