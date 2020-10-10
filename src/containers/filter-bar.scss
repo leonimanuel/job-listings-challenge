@@ -2,11 +2,18 @@ $desaturated-dark-cyan: hsl(180, 29%, 50%);
 $light-grayish-cyan-filters: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 
-#filter-bar {
+.filter-bar {
+	width: 100%;
+	top: -40px;
+	border-radius: 3px;
+
 	background-color: white;
-	max-width: 90%;
-	margin: 0 auto;	
 	box-shadow: rgba(149, 157, 165, 0.25) 0px 8px 12px;
+	min-height: 50px;
+
+	&.hidden {
+		visibility: hidden;
+	}
 
 	#filter-bar-content {
 		display: flex;
@@ -17,17 +24,24 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		#filters-container {
 			display: flex;
 			flex-wrap: wrap;
+			margin: 20px 0;
 
 			.filter-wrapper {
 				display: flex;
-				margin: 5px;
+				margin: 10px 5px;
+				margin-right: 10px;
 				border-radius: 5px;
 				overflow: hidden;
+
+				@media only screen and (max-device-width: 375px) {
+					font-size: 0.8em;
+				}  				
 
 				.tag {
 					background-color: $light-grayish-cyan-filters;
 					color: hsl(180, 29%, 50%); 
 					padding: 10px;
+					font-weight: 700;
 				}
 
 				.filter-remove {

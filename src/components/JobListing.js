@@ -14,7 +14,6 @@ import "./job-listing.scss"
 
 class JobListing extends Component { 
 	render() {
-		debugger
 		const { job } = this.props
 		return (
 			<div className={`job-wrapper ${job.featured ? "featured" : null}`}>

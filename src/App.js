@@ -9,7 +9,7 @@ import FilterBar from "./containers/FilterBar";
 
 class App extends Component {
   state = {
-  	filters: []
+  	filters: ["CSS", "Frontend"]
   }
   
 	addFilter = (filter) => {
@@ -34,15 +34,17 @@ class App extends Component {
 	  const { filters } = this.state
 	  return (
 	    <div className="App">
-	    	<MediaQuery maxWidth={375}>
+	    	<MediaQuery className="media-query-tag" maxWidth={375}>
 		    	<img className="header-image" src={require("./project_files/images/bg-header-mobile.svg")} alt="mobile header design" />    		
 	    	</MediaQuery>
-	    	<MediaQuery minDeviceWidth={376}>
+	    	<MediaQuery className="media-query-tag" minDeviceWidth={376}>
 		    	<img className="header-image" src={require("./project_files/images/bg-header-desktop.svg")} alt="desktop header design" />    		
 	    	</MediaQuery>
 
-	      {filters.length ? <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} /> : null}
-	      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
+	    	<div id="app-content">
+		      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} />
+		      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
+	    	</div>
 	    </div>
 	  );
 	}

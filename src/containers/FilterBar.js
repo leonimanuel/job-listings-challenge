@@ -5,11 +5,12 @@ import Filter from "../components/Filter"
 
 class FilterBar extends Component {
 	render() {
+		const { filters } = this.props
 		return (
-			<div id="filter-bar">
+			<div className={`filter-bar ${filters.length ? null : "hidden"}`}>
 				<div id="filter-bar-content">
 					<div id="filters-container">
-						{this.props.filters.map(filter => <Filter filter={filter} onClickRemove={() => this.props.onFilterRemove(filter)}/>)}			
+						{filters.map(filter => <Filter filter={filter} onClickRemove={() => this.props.onFilterRemove(filter)}/>)}			
 					</div>	
 					
 					<div id="clear-filters-button" onClick={this.props.onClearFilters}>Clear</div>		

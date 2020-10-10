@@ -3,8 +3,7 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 
 #jobs-container {
-	max-width: 90%;
-	margin: 0 auto;
+	// border: 2px solid purple;
 }
 
 .job-wrapper {
@@ -20,7 +19,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
   border-radius: 3px;
 
   font-size: 15px;
-	font-family: 'Spartan', sans-serif;			
 	box-shadow: rgba(149, 157, 165, 0.25) 0px 8px 12px;
 
 
@@ -32,7 +30,6 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 		position: relative;
 		flex-direction: column;
 		align-items: flex-start;
-		font-size: 0.9em;
 	}  
 
 	&.featured {
@@ -118,6 +115,8 @@ $dark-grayish-cyan: hsl(180, 8%, 52%);
 			padding: 10px;
 			margin-right: 10px;
 			margin-top: 20px;
+			border-radius: 5px;
+			font-weight: 700;
 		}
 	}
 

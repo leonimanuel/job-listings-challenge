@@ -3,11 +3,25 @@
   background-color: hsl(180, 52%, 96%);
   border: 2px solid red;
   font-family: 'Spartan', sans-serif;     
+  position: relative;
 }
 
 .header-image {
   background-color: hsl(180, 29%, 50%);
-  max-width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 0;  
+
+  width: 100%;
+  height: 20vh;
+}
+
+#app-content {
+  position: relative;  
+  /*border: 2px solid green;*/
+  width: 90%;
+  margin: 0 auto; 
+  margin-top: 15vh;
 }
 
 /*.App-logo {
