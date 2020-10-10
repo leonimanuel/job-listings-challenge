@@ -12,7 +12,7 @@ import "./job-listing.scss"
     // "languages": ["HTML", "CSS", "JavaScript"],
     // "tools": []
 
-class JobListing extends Component {
+class JobListing extends Component { 
 	render() {
 		const { job } = this.props
 		return (
@@ -31,10 +31,10 @@ class JobListing extends Component {
 					</div>
 				</div>
 				<div className="tags-wrapper">
-					<div className="tag role">{job.role}</div>
-					<div className="tag level">{job.level}</div>
-					{job.languages.map(lang => <div className="tag language">{lang}</div>)}
-					{job.tools.map(tool => <div className="tag language">{tool}</div>)}
+					<div className="tag role" onClick={() => this.props.onFilterSelect(job.role)}>{job.role}</div>
+					<div className="tag level" onClick={() => this.props.onFilterSelect(job.level)}>{job.level}</div>
+					{job.languages.map(lang => <div className="tag language" onClick={() => this.props.onFilterSelect(lang)}>{lang}</div>)}
+					{job.tools.map(tool => <div className="tag language" onClick={() => this.props.onFilterSelect(tool)}>{tool}</div>)}
 				</div>
 				
 			</div>
