@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  background-color: hsl(180, 52%, 96%);
   border: 2px solid red;
   font-family: 'Spartan', sans-serif;     
   position: relative;
+  /*height: 100vh;*/
 }
 
 .header-image {
