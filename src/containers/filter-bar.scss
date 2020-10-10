@@ -40,7 +40,7 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
 				.tag {
 					background-color: $light-grayish-cyan-filters;
-					color: hsl(180, 29%, 50%); 
+					color: $desaturated-dark-cyan; 
 					padding: 10px;
 					font-weight: 700;
 				}

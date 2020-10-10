@@ -58,7 +58,7 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 			align-items: center;
 
 			.company {
-				color: hsl(180, 29%, 50%);
+				color: $desaturated-dark-cyan;
 				font-weight: 700;
 				margin-right: 10px
 			}
@@ -99,7 +99,7 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 	
 		.posting-details {
 			display: flex;
-			color: hsl(180, 8%, 52%);
+			color: $dark-grayish-cyan;
 		}
 	}
 
@@ -117,7 +117,7 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
 		.tag {
 			background-color: $light-grayish-cyan-filters;
-			color: hsl(180, 29%, 50%); 
+			color: $desaturated-dark-cyan; 
 			padding: 10px;
 			margin-right: 10px;
 			margin-top: 20px;
@@ -128,7 +128,7 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
 		.tag:hover {
 			color: white;
-			background-color: hsl(180, 29%, 50%);
+			background-color: $desaturated-dark-cyan;
 		}
 	}
 
