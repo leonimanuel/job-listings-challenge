@@ -101,6 +101,11 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 			display: flex;
 			color: $dark-grayish-cyan;
 		}
+
+		.posting-details :not(:last-child)::after {
+			content: " • ";
+			white-space: pre;
+		}
 	}
 
 	.tags-wrapper {
