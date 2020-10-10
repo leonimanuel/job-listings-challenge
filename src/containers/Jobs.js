@@ -5,11 +5,12 @@ let jobData = require('../project_files/data.json')
 
 class Jobs extends Component {
 	state = {
-		filters: []
+		filters: ["Frontend"]
 	}
 
-	addFilter = (filter) => {
-		this.setState({filter: this.state.filters.push(filter)})
+	onFilterAdd = (filter) => {
+		// this.setState({filter: this.state.filters.push(filter)})
+		this.props.onFilterAddToApp(filter)
 	}
 
 	createJobListings = () => {
@@ -22,7 +23,7 @@ class Jobs extends Component {
 				|| job.tools.find(tool => filters.includes(tool))
 			) {
 				return (
-					<JobListing job={job}/>
+					<JobListing job={job} onFilterSelect={(filter) => this.onFilterAdd(filter)}/>
 				)
 			}
 		})
