@@ -1,0 +1,33 @@
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan-filters: hsl(180, 31%, 95%);
+
+#filter-bar {
+	border: 2px solid black;
+
+	background-color: white;
+	width: 600px;
+	margin: 0 auto;
+
+
+	#filters-container {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 20px;		
+		
+		.filter-wrapper {
+			display: flex;
+
+			.tag {
+				background-color: $light-grayish-cyan-filters;
+				color: hsl(180, 29%, 50%); 
+				padding: 3px;	
+				height: 1em;			
+			}
+
+			.filter-remove {
+				background-color: $desaturated-dark-cyan;
+			}
+		}
+	}
+}
+
