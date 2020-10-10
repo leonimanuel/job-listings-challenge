@@ -19,7 +19,7 @@ class App extends Component {
 	  return (
 	    <div className="App">
 	      <FilterBar filters={filters} />
-	      <Jobs onFilterAddToApp={(filter) => this.addFilter(filter)} />
+	      <Jobs filters={filters} onFilterAddToApp={(filter) => this.addFilter(filter)} />
 	    </div>
 	  );
 	}

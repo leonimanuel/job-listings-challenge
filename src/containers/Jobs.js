@@ -4,17 +4,13 @@ import JobListing from "../components/JobListing"
 let jobData = require('../project_files/data.json')
 
 class Jobs extends Component {
-	state = {
-		filters: ["Frontend"]
-	}
-
 	onFilterAdd = (filter) => {
 		// this.setState({filter: this.state.filters.push(filter)})
 		this.props.onFilterAddToApp(filter)
 	}
 
 	createJobListings = () => {
-		const { filters } = this.state
+		const { filters } = this.props
 		return jobData.map(job => {
 			if (
 				filters.includes(job.role) 
