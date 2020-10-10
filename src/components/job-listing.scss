@@ -5,6 +5,7 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
   // font: 100% $font-stack;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   width: 600px;
   background-color: white;
@@ -14,6 +15,10 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
   font-size: 15px;
 	font-family: 'Spartan', sans-serif;			
 
+	.logo {
+		width: 50px;
+		height: 50px;
+	}
 
 	.details-wrapper {
 		display: flex;
