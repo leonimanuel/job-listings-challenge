@@ -3,6 +3,9 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
 
 #filter-bar {
 	border: 2px solid black;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px;		
 
 	background-color: white;
 	width: 600px;
@@ -11,11 +14,10 @@ $light-grayish-cyan-filters: hsl(180, 31%, 95%);
 
 	#filters-container {
 		display: flex;
-		justify-content: space-between;
-		margin: 0 20px;		
-		
+
 		.filter-wrapper {
 			display: flex;
+			margin: 5px;
 
 			.tag {
 				background-color: $light-grayish-cyan-filters;

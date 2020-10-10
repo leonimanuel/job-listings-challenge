@@ -5,7 +5,7 @@ class Filter extends Component {
 	render() {
 		return (
 			<div className="filter-wrapper">
-				<div className="filter-label">{this.props.filter}</div>
+				<div className="tag filter-label">{this.props.filter}</div>
 				<div className="filter-remove"><RemoveIcon /></div>
 			</div>
 		)

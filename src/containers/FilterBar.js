@@ -7,8 +7,11 @@ class FilterBar extends Component {
 	render() {
 		return (
 			<div id="filter-bar">
-				{this.props.filters.map(filter => <Filter filter={filter}/>)}			
-				<div id="clear-filters-button">Clear</div>			
+				<div id="filters-container">
+					{this.props.filters.map(filter => <Filter filter={filter}/>)}			
+				</div>	
+				
+				<div id="clear-filters-button">Clear</div>		
 			</div>
 		)
 	}

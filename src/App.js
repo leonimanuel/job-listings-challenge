@@ -7,7 +7,7 @@ import FilterBar from "./containers/FilterBar"
 
 class App extends Component {
   state = {
-  	filters: []
+  	filters: ["CSS"]
   }
   
 	addFilter = (filter) => {
