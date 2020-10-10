@@ -4,8 +4,28 @@ import JobListing from "../components/JobListing"
 let jobData = require('../project_files/data.json')
 
 class Jobs extends Component {
+	state = {
+		filters: []
+	}
+
+	addFilter = (filter) => {
+		this.setState({filter: this.state.filters.push(filter)})
+	}
+
 	createJobListings = () => {
-		return jobData.map(job => <JobListing job={job}/>)
+		const { filters } = this.state
+		return jobData.map(job => {
+			if (
+				filters.includes(job.role) 
+				|| filters.includes(job.level)
+				|| job.languages.find(lang => filters.includes(lang))
+				|| job.tools.find(tool => filters.includes(tool))
+			) {
+				return (
+					<JobListing job={job}/>
+				)
+			}
+		})
 	}
 
 	render() {
