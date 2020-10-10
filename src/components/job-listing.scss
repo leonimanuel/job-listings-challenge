@@ -7,7 +7,7 @@
   background-color: white;
   margin: 10px auto;
   padding: 10px 0;
-  border: 2px solid blue;
+  // border: 2px solid blue;
   font-size: 15px;
 	font-family: 'Spartan', sans-serif;			
 
@@ -16,11 +16,32 @@
 		display: flex;
 		flex-direction: column;
 		text-align: left;
-		border: 2px solid green;
+		// border: 2px solid green;
 
-		.company {
-			color: hsl(180, 29%, 50%);
-			// font-weight: bold;
+		.company-and-highlights-wrapper {
+			display: flex;
+			// height: 1em;
+
+			.company {
+				color: hsl(180, 29%, 50%);
+				// font-weight: bold;
+			}
+
+			.highlight {
+				padding: 0 5px;
+				margin: 0 5px;
+				border-radius: 10px;				
+
+				&.new {
+					color: white;
+					background-color: hsl(180, 29%, 50%);
+				}
+
+				&.featured {
+					color: white;
+					background-color: hsl(180, 14%, 20%);
+				}
+			}
 		}
 	
 		.posting-details {
@@ -32,7 +53,7 @@
 	.tags-wrapper {
 		// margin-right: 0;
 		display: flex;
-		border: 2px solid grey;
+		// border: 2px solid grey;
 		align-items: center;
 
 		.tag {
