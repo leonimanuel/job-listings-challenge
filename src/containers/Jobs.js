@@ -4,11 +4,6 @@ import JobListing from "../components/JobListing"
 let jobData = require('../project_files/data.json')
 
 class Jobs extends Component {
-	onFilterAdd = (filter) => {
-		// this.setState({filter: this.state.filters.push(filter)})
-		this.props.onFilterAddToApp(filter)
-	}
-
 	createJobListings = () => {
 		const { filters } = this.props
 		return jobData.map(job => {
@@ -19,7 +14,7 @@ class Jobs extends Component {
 				|| job.tools.find(tool => filters.includes(tool))
 			) {
 				return (
-					<JobListing job={job} onFilterSelect={(filter) => this.onFilterAdd(filter)}/>
+					<JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
 				)
 			}
 		})
