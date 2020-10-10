@@ -8,10 +8,10 @@ class FilterBar extends Component {
 		return (
 			<div id="filter-bar">
 				<div id="filters-container">
-					{this.props.filters.map(filter => <Filter filter={filter}/>)}			
+					{this.props.filters.map(filter => <Filter filter={filter} onClickRemove={() => this.props.onFilterRemove(filter)}/>)}			
 				</div>	
 				
-				<div id="clear-filters-button">Clear</div>		
+				<div id="clear-filters-button" onClick={this.props.onClearFilters}>Clear</div>		
 			</div>
 		)
 	}

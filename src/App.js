@@ -24,12 +24,16 @@ class App extends Component {
 		})
 	}
 
+	clearFilters = () => {
+		this.setState({filters: []})
+	}
+
 	render() {
 	  const { filters } = this.state
 	  debugger
 	  return (
 	    <div className="App">
-	      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} />
+	      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} />
 	      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
 	    </div>
 	  );

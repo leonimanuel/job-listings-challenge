@@ -7,7 +7,7 @@ class Jobs extends Component {
 	createJobListings = () => {
 		const { filters } = this.props
 		return jobData.map(job => {
-			if (filters.length == 0) {
+			if (filters.length === 0) {
 				return <JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
 			}
 			else if (
@@ -22,6 +22,7 @@ class Jobs extends Component {
 	}
 
 	render() {
+		debugger
 		return (
 			<div id="reviews-overview" className="overview-wrapper">
 				{this.createJobListings()}
