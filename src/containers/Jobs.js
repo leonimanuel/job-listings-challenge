@@ -7,15 +7,16 @@ class Jobs extends Component {
 	createJobListings = () => {
 		const { filters } = this.props
 		return jobData.map(job => {
-			if (
+			if (filters.length == 0) {
+				return <JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
+			}
+			else if (
 				filters.includes(job.role) 
 				|| filters.includes(job.level)
 				|| job.languages.find(lang => filters.includes(lang))
 				|| job.tools.find(tool => filters.includes(tool))
 			) {
-				return (
-					<JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
-				)
+				return <JobListing job={job} onFilterSelect={(filter) => this.props.onFilterAdd(filter)}/>
 			}
 		})
 	}
