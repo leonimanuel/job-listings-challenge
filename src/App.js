@@ -7,11 +7,14 @@ import FilterBar from "./containers/FilterBar"
 
 class App extends Component {
   state = {
-  	filters: ["Frontend"]
+  	filters: ["CSS"]
   }
   
 	addFilter = (filter) => {
-		this.setState({filter: this.state.filters.push(filter)});
+		debugger
+		if (!this.state.filters.includes(filter)) {
+			this.setState({filter: this.state.filters.push(filter)});
+		}
 	}  
 
 	render() {
@@ -19,7 +22,7 @@ class App extends Component {
 	  return (
 	    <div className="App">
 	      <FilterBar filters={filters} />
-	      <Jobs filters={filters} onFilterAddToApp={(filter) => this.addFilter(filter)} />
+	      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
 	    </div>
 	  );
 	}
