@@ -41,7 +41,7 @@ class App extends Component {
 		    	<img className="header-image" src={require("./project_files/images/bg-header-desktop.svg")} alt="desktop header design" />    		
 	    	</MediaQuery>
 
-	      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} />
+	      {filters.length ? <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} /> : null}
 	      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
 	    </div>
 	  );
