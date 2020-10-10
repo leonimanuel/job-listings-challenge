@@ -1,35 +1,50 @@
 $desaturated-dark-cyan: hsl(180, 29%, 50%);
 $light-grayish-cyan-filters: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
 
 #filter-bar {
-	border: 2px solid black;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 20px;		
-
 	background-color: white;
-	width: 600px;
-	margin: 0 auto;
+	max-width: 90%;
+	margin: 0 auto;	
+	box-shadow: rgba(149, 157, 165, 0.25) 0px 8px 12px;
 
-
-	#filters-container {
+	#filter-bar-content {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 10px 20px;
 
-		.filter-wrapper {
+		#filters-container {
 			display: flex;
-			margin: 5px;
+			flex-wrap: wrap;
 
-			.tag {
-				background-color: $light-grayish-cyan-filters;
-				color: hsl(180, 29%, 50%); 
-				padding: 3px;	
-				height: 1em;			
-			}
+			.filter-wrapper {
+				display: flex;
+				margin: 5px;
+				border-radius: 5px;
+				overflow: hidden;
 
-			.filter-remove {
-				background-color: $desaturated-dark-cyan;
+				.tag {
+					background-color: $light-grayish-cyan-filters;
+					color: hsl(180, 29%, 50%); 
+					padding: 10px;
+				}
+
+				.filter-remove {
+					background-color: $desaturated-dark-cyan;
+					width: 40px; //minimum comfortable size for mobile clicks
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 			}
 		}
+
+
+		#clear-filters-button {
+			color: $dark-grayish-cyan;
+			font-weight: 700;
+		}	
 	}
 }
 
