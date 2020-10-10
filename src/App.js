@@ -11,17 +11,25 @@ class App extends Component {
   }
   
 	addFilter = (filter) => {
-		debugger
 		if (!this.state.filters.includes(filter)) {
-			this.setState({filter: this.state.filters.push(filter)});
+			this.setState({filters: [...this.state.filters, filter]}, () => {
+				console.log(this.state.filters)
+			});
 		}
 	}  
 
+	removeFilter = (removed_filter) => {
+		this.setState({filters: this.state.filters.filter(filter => filter !== removed_filter)}, () => {
+			console.log(this.state.filters)
+		})
+	}
+
 	render() {
 	  const { filters } = this.state
+	  debugger
 	  return (
 	    <div className="App">
-	      <FilterBar filters={filters} />
+	      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} />
 	      <Jobs filters={filters} onFilterAdd={(filter) => this.addFilter(filter)} />
 	    </div>
 	  );
