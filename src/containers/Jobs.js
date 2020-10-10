@@ -17,7 +17,7 @@ class Jobs extends Component {
 
 	render() {
 		return (
-			<div id="reviews-overview" className="overview-wrapper">
+			<div id="jobs-container">
 				{this.createJobListings()}
 			</div>
 		)
