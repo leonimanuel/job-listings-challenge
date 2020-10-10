@@ -14,10 +14,12 @@ import "./job-listing.scss"
 
 class JobListing extends Component { 
 	render() {
+		debugger
 		const { job } = this.props
 		return (
 			<div className="job-wrapper">
 				<div className="details-wrapper">
+					<img src={require(`../project_files/images/${job.logo.split("/").pop()}`)} alt="company logo" width="100px"/>
 					<div className="company-and-highlights-wrapper">
 						<div className="company">{job.company}</div>
 						{job.new ? <div className="highlight new">NEW!</div> : null}
