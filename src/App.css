@@ -1,9 +1,16 @@
 .App {
   text-align: center;
   background-color: hsl(180, 52%, 96%);
+  border: 2px solid red;
+  font-family: 'Spartan', sans-serif;     
 }
 
-.App-logo {
+.header-image {
+  background-color: hsl(180, 29%, 50%);
+  max-width: 100%;
+}
+
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -36,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
