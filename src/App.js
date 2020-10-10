@@ -30,7 +30,6 @@ class App extends Component {
 
 	render() {
 	  const { filters } = this.state
-	  debugger
 	  return (
 	    <div className="App">
 	      <FilterBar filters={filters} onFilterRemove={(filter) => this.removeFilter(filter)} onClearFilters={this.clearFilters} />
