@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import "./filter-bar.scss"
+
+import Filter from "../components/Filter"
 
 class FilterBar extends Component {
 	render() {
 		return (
-			<div>
-				{this.props.filters.map(filter => <div>{filter}</div>)}			
+			<div id="filter-bar">
+				{this.props.filters.map(filter => <Filter filter={filter}/>)}			
 			</div>
 		)
 	}
