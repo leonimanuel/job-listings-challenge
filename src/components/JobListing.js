@@ -20,8 +20,8 @@ class JobListing extends Component {
 				<div className="details-wrapper">
 					<div className="company-and-highlights-wrapper">
 						<div className="company">{job.company}</div>
-						{job.new ? <div className="new-tag">NEW!</div> : null}
-						{job.featured ? <div className="featured-tag">FEATURED</div> : null}
+						{job.new ? <div className="highlight new">NEW!</div> : null}
+						{job.featured ? <div className="highlight featured">FEATURED</div> : null}
 					</div>
 					<div className="position">{job.position}</div>
 					<div className="posting-details">
